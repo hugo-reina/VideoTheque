@@ -24,10 +24,14 @@ public class DVD extends Article
     }
 
     public void setRéserveur(Client réserveur) {
-        this.réserveur = réserveur;
+        if (this.réserveur == null){
+            this.réserveur = réserveur;
+        }
     }
 
     public void setEmprunteur(Client emprunteur) {
-        this.emprunteur = emprunteur;
+        if (this.emprunteur == null){
+            this.emprunteur = emprunteur;
+        }
     }
 }

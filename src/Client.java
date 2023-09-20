@@ -47,7 +47,12 @@ public class Client extends Article
     }
 
     public void réserve(DVD dVD){
-        dVD.estRéservé();
+        if(this.aFaitUneRéservation == false){
+            if(dVD.estEmpruntéPar() != this ){
+                dVD.estRéservé();
+            }
+
+        }
     }
 
     public void annuleRéservation(){
